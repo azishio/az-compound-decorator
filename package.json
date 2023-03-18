@@ -1,0 +1,47 @@
+{
+  "name": "@azishio/draft-compound-decorator",
+  "version": "0.1.0",
+  "description": "Support nested draft-decorators.",
+  "main": "src/index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "draft",
+    "decorator"
+  ],
+  "author": "azishio<azishio3141@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azishio/draft-compound-decorator.git"
+  },
+  "publishConfig": {
+    "@azishio:registry": "https://npm.pkg.github.com"
+  },
+  "license": "MIT",
+  "files": ["dist"],
+  "devDependencies": {
+    "@types/draft-js": "^0.11.10",
+    "@types/react": "^18.0.28",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "draft-js": "^0.11.7",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "react": "^18.2.0",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "immutable": "^3.7.6",
+    "prettier": "^2.8.4"
+  }
+}
