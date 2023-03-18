@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0913272-43df-410c-93ac-b7d268dfc9d0" name="変更" comment="Fix .gitignore.&#10;Added files that were out of our control">
-      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c0913272-43df-410c-93ac-b7d268dfc9d0" name="変更" comment="delete .github&#10;update package.json&#10;make .npmrc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679121210969</updated>
       <workItem from="1679121212104" duration="803000" />
-      <workItem from="1679122044523" duration="8945000" />
+      <workItem from="1679122044523" duration="9533000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1679129105609</created>
@@ -131,7 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679130723696</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="delete .github&#10;update package.json&#10;make .npmrc">
+      <created>1679133546706</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679133546706</updated>
+    </task>
+    <task id="LOCAL-00011" summary="delete .github&#10;update package.json&#10;make .npmrc">
+      <created>1679133773004</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679133773004</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +177,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="Fix .gitignore." />
     <MESSAGE value="Fix .gitignore.&#10;Added files that were out of our control" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix .gitignore.&#10;Added files that were out of our control" />
+    <MESSAGE value="delete .github&#10;update package.json&#10;make .npmrc" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete .github&#10;update package.json&#10;make .npmrc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
