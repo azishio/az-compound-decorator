@@ -17,7 +17,7 @@
     "url": "https://github.com/azishio/draft-compound-decorator.git"
   },
   "publishConfig": {
-    "@azishio:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "license": "MIT",
   "files": ["dist"],
