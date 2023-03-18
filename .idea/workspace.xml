@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0913272-43df-410c-93ac-b7d268dfc9d0" name="変更" comment="Fix .gitignore.">
+    <list default="true" id="c0913272-43df-410c-93ac-b7d268dfc9d0" name="変更" comment="Fix .gitignore.&#10;Added files that were out of our control">
+      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679121210969</updated>
       <workItem from="1679121212104" duration="803000" />
-      <workItem from="1679122044523" duration="6939000" />
+      <workItem from="1679122044523" duration="8945000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1679129105609</created>
@@ -94,7 +96,42 @@
       <option name="project" value="LOCAL" />
       <updated>1679130417063</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix .gitignore.">
+      <created>1679130556750</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679130556750</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix .gitignore.">
+      <created>1679130614149</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679130614149</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fix .gitignore.">
+      <created>1679130639776</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679130639776</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix .gitignore.">
+      <created>1679130657561</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679130657561</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix .gitignore.&#10;Added files that were out of our control">
+      <created>1679130723696</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679130723696</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +164,8 @@
     <MESSAGE value="add GitHub Actions." />
     <MESSAGE value="first commit" />
     <MESSAGE value="Fix .gitignore." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix .gitignore." />
+    <MESSAGE value="Fix .gitignore.&#10;Added files that were out of our control" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix .gitignore.&#10;Added files that were out of our control" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
