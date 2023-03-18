@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0913272-43df-410c-93ac-b7d268dfc9d0" name="変更" comment="make .npmrc">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="c0913272-43df-410c-93ac-b7d268dfc9d0" name="変更" comment="update package.json" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679121210969</updated>
       <workItem from="1679121212104" duration="803000" />
-      <workItem from="1679122044523" duration="11058000" />
+      <workItem from="1679122044523" duration="11363000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1679129105609</created>
@@ -152,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679134073343</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update package.json">
+      <created>1679135529113</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679135529113</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +191,8 @@
     <MESSAGE value="Fix .gitignore.&#10;Added files that were out of our control" />
     <MESSAGE value="delete .github&#10;update package.json&#10;make .npmrc" />
     <MESSAGE value="make .npmrc" />
-    <option name="LAST_COMMIT_MESSAGE" value="make .npmrc" />
+    <MESSAGE value="update package.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="update package.json" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
