@@ -15,14 +15,14 @@ const collectLocationOfSign = (
   decorators.forEach((decorator, decoratorIndex) => {
     const { strategy } = decorators[decoratorIndex];
     const callback = (start: number, end: number) => {
-      if (signsLocation.every(v => !v[start])) {
-        signsLocation[decoratorIndex][start] = start;
-      }
+      // if (signsLocation.every(v => !v[start])) {
+      signsLocation[decoratorIndex][start] = start;
+      // }
 
       const endMinusOne = end - 1;
-      if (signsLocation.every(v => !v[endMinusOne])) {
-        signsLocation[decoratorIndex][endMinusOne] = endMinusOne;
-      }
+      // if (signsLocation.every(v => !v[endMinusOne])) {
+      signsLocation[decoratorIndex][endMinusOne] = endMinusOne;
+      // }
     };
     strategy(block, callback, contentState);
   });

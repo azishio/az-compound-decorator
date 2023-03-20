@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0913272-43df-410c-93ac-b7d268dfc9d0" name="変更" comment="create nameMap">
+    <list default="true" id="c0913272-43df-410c-93ac-b7d268dfc9d0" name="変更" comment="delete signType">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constructorFn.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/constructorFn.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getDecorations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/getDecorationsFn.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getDecorationsFn.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/getDecorationsFn.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <workItem from="1679121212104" duration="803000" />
       <workItem from="1679122044523" duration="12385000" />
       <workItem from="1679227491802" duration="2692000" />
-      <workItem from="1679334148506" duration="4221000" />
+      <workItem from="1679334148506" duration="5859000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1679129105609</created>
@@ -190,7 +187,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679339127478</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="delete signType">
+      <created>1679339812871</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1679339812871</updated>
+    </task>
+    <task id="LOCAL-00018" summary="delete signType">
+      <created>1679339854928</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1679339854928</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +241,8 @@
     <MESSAGE value="rm README.md" />
     <MESSAGE value="Correction of parentName check" />
     <MESSAGE value="create nameMap" />
-    <option name="LAST_COMMIT_MESSAGE" value="create nameMap" />
+    <MESSAGE value="delete signType" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete signType" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
