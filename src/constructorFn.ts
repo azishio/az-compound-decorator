@@ -1,7 +1,7 @@
 import { AzDecorator, AzDecoratorOption, HaveEverythingOption, SignType } from "./types";
 
 const OptionError = (
-  type: "nameIsEmptyStr" | "parentNameIsEmptyArr" | "duplicateParentName" | "InvalidParentName",
+  type: "nameIsEmptyStr" | "parentNameIsEmptyArr" | "duplicateParentName" | "invalidParentName",
   option: AzDecoratorOption
 ) => {
   switch (type) {
@@ -18,7 +18,7 @@ Decorator:${JSON.stringify(option)}`;
       return `AzCompoundDecorator:
 There is a duplicate element in parentName.
 Decorator:${JSON.stringify(option)}`;
-    case "InvalidParentName":
+    case "invalidParentName":
       return `AzCompoundDecorator:
 The "name" in parentName does not exist or was not previously defined.
 Only the relevant element of "parentName" will be invalidated.
@@ -43,7 +43,7 @@ const checkAndReturnOptions = (
     signType: defaultSymbolType,
   };
 
-  return decArr.map((dec, decIndex) => {
+  const options = decArr.map((dec, decIndex) => {
     const { option } = dec;
     if (!option) return defaultProp;
 
@@ -58,37 +58,23 @@ const checkAndReturnOptions = (
       return defaultProp;
     }
 
-    if (option.parentName) {
-      const parentName = option.parentName as string[];
-      const illegalIndex: number[] = [];
+    const { parentName } = option;
+    if (parentName) {
       if (parentName.length === 0) {
         console.warn(OptionError("parentNameIsEmptyArr", option));
-        delete decArr[decIndex].option;
+        newProp.parentName = null;
       } else {
-        if (
-          parentName.every((v, ii) => {
-            const judge = parentName.indexOf(v) === ii;
-            if (!judge) {
-              illegalIndex.push(ii);
-            }
-            return judge;
-          })
-        ) {
+        const nonDuplicateParentName = [...new Set(parentName)];
+
+        if (nonDuplicateParentName.length !== parentName.length) {
           console.warn(OptionError("duplicateParentName", option));
         }
-        if (
-          parentName.every((v, ii) => {
-            const judgment = checkedName.includes(v) || v === "_undecorated";
-            if (!judgment) {
-              illegalIndex.push(ii);
-            }
-            return judgment;
-          })
-        ) {
-          console.error(OptionError("InvalidParentName", option));
+
+        newProp.parentName = nonDuplicateParentName.filter(v => checkedName.includes(v));
+        if (newProp.parentName.length !== nonDuplicateParentName.length) {
+          console.error(OptionError("invalidParentName", option));
         }
       }
-      newProp.parentName = parentName.filter((v, i) => !illegalIndex.includes(i));
     }
 
     if (option.signType) newProp.signType = option.signType;
@@ -96,5 +82,7 @@ const checkAndReturnOptions = (
     checkedName.push(option.name);
     return newProp;
   });
+
+  options.map();
 };
 export default checkAndReturnOptions;

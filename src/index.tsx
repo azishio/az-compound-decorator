@@ -1,9 +1,9 @@
 import { ContentBlock, ContentState, DraftDecoratorType } from "draft-js";
 import Immutable from "immutable";
-import { collectLocationOfSign, toDecoratorRange, toKeyList } from "./getDecorations";
+import { collectLocationOfSign, toDecoratorRange, toKeyList } from "./getDecorationsFn";
 
 import { AzDecorator, DecoratorKey, DecoratorRange, HaveEverythingOption, SignType } from "./types";
-import checkAndReturnOptions from "./constructor";
+import checkAndReturnOptions from "./constructorFn";
 /* eslint max-classes-per-file: 0 */
 
 const { List } = Immutable;
