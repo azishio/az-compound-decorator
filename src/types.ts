@@ -3,7 +3,6 @@ import { DraftDecorator } from "draft-js";
 type AzDecoratorOption = {
   name: string; // Other than "_undecorated"
   parentName?: string[];
-  signType?: SignType;
 };
 
 type AzDecorator = DraftDecorator & {
@@ -16,30 +15,14 @@ type DecoratorRange = {
   end: number;
 };
 
-
-
 type DecoratorKey = {
   decoratorIndex: number;
   id: number;
 };
 
-
-
-type SignType = "same" | "endless";
-
 type HaveEverythingOption = {
   name: string | null; // Other than "_undecorated"
   parentName: string[] | null;
-  signType: SignType;
 };
 
-
-
-export type {
-  AzDecoratorOption,
-  AzDecorator,
-  DecoratorRange,
-  HaveEverythingOption,
-  DecoratorKey,
-  SignType,
-};
+export type { AzDecoratorOption, AzDecorator, DecoratorRange, HaveEverythingOption, DecoratorKey };

@@ -2,7 +2,7 @@ import { ContentBlock, ContentState, DraftDecoratorType } from "draft-js";
 import Immutable from "immutable";
 import { collectLocationOfSign, toDecoratorRange, toKeyList } from "./getDecorationsFn";
 
-import { AzDecorator, DecoratorKey, DecoratorRange, HaveEverythingOption, SignType } from "./types";
+import { AzDecorator, DecoratorKey, DecoratorRange, HaveEverythingOption } from "./types";
 import checkAndReturnOptions from "./constructorFn";
 /* eslint max-classes-per-file: 0 */
 
@@ -17,13 +17,9 @@ export default class CompoundDecorator implements DraftDecoratorType {
 
   private readonly nameMap: { [name: string]: number };
 
-  constructor(
-    decorator: Array<AzDecorator>,
-    defaultSignType: SignType = "same",
-    callback = (v: DecoratorRange[][]) => v
-  ) {
+  constructor(decorator: Array<AzDecorator>, callback = (v: DecoratorRange[][]) => v) {
     this.decorators = [...decorator];
-    [this.option, this.nameMap] = checkAndReturnOptions(this.decorators, defaultSignType);
+    [this.option, this.nameMap] = checkAndReturnOptions(this.decorators);
     this.callback = callback;
   }
 

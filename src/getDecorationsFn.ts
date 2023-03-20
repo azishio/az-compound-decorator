@@ -4,8 +4,7 @@ import { AzDecorator, DecoratorKey, DecoratorRange, HaveEverythingOption } from 
 const collectLocationOfSign = (
   decorators: AzDecorator[],
   block: ContentBlock,
-  contentState: ContentState,
-  options: HaveEverythingOption[]
+  contentState: ContentState
 ) => {
   const signsLocation: number[][] = Array(decorators.length);
 
@@ -20,11 +19,9 @@ const collectLocationOfSign = (
         signsLocation[decoratorIndex][start] = start;
       }
 
-      if (options[decoratorIndex].signType === "same") {
-        const endMinusOne = end - 1;
-        if (signsLocation.every(v => !v[endMinusOne])) {
-          signsLocation[decoratorIndex][endMinusOne] = endMinusOne;
-        }
+      const endMinusOne = end - 1;
+      if (signsLocation.every(v => !v[endMinusOne])) {
+        signsLocation[decoratorIndex][endMinusOne] = endMinusOne;
       }
     };
     strategy(block, callback, contentState);
@@ -46,6 +43,8 @@ const toDecoratorRange = (
 
       const decoratorsRanges: DecoratorRange[] = [];
 
+      // parentチェック
+
       decoratorSigns.forEach((signOffset, signIndex) => {
         // ここで読んでいるときにnullになることはない
         const depth = depthMap[<number>signOffset];
@@ -53,18 +52,9 @@ const toDecoratorRange = (
 
         decoratorSigns[signIndex] = null;
 
-        let endSignIndex;
-        let endSignOffset;
-
-        if (options[decoratorIndex].signType === "same") {
-          endSignIndex = decoratorSigns.findIndex(v => v && depthMap[v] === depth);
-          endSignOffset = endSignIndex !== -1 ? decoratorSigns[endSignIndex] : null;
-          delete decoratorSigns[endSignIndex];
-        } else {
-          const tmp = depthMap.findIndex((v, i) => i > startSignOffset && v !== depth);
-
-          endSignOffset = tmp !== -1 ? tmp - 1 : null;
-        }
+        const endSignIndex = decoratorSigns.findIndex(v => v && depthMap[v] === depth);
+        const endSignOffset = endSignIndex !== -1 ? decoratorSigns[endSignIndex] : null;
+        delete decoratorSigns[endSignIndex];
 
         if (endSignOffset) {
           decoratorsRanges.push({

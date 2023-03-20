@@ -1,4 +1,4 @@
-import { AzDecorator, AzDecoratorOption, HaveEverythingOption, SignType } from "./types";
+import { AzDecorator, AzDecoratorOption, HaveEverythingOption } from "./types";
 
 const OptionError = (
   type: "nameIsEmptyStr" | "parentNameIsEmptyArr" | "duplicateParentName" | "invalidParentName",
@@ -30,8 +30,7 @@ Decorator:${JSON.stringify(option)}`;
 };
 
 const checkAndReturnOptions = (
-  decorators: AzDecorator[],
-  defaultSymbolType: SignType
+  decorators: AzDecorator[]
 ): [HaveEverythingOption[], { [name: string]: number }] => {
   const checkedName: string[] = [];
   // いろいろ改変するので独立させておく
@@ -40,7 +39,6 @@ const checkAndReturnOptions = (
   const defaultProp = {
     name: null,
     parentName: null,
-    signType: defaultSymbolType,
   };
 
   const options = decArr.map((dec, decIndex) => {
@@ -76,8 +74,6 @@ const checkAndReturnOptions = (
         }
       }
     }
-
-    if (option.signType) newProp.signType = option.signType;
 
     checkedName.push(option.name);
     return newProp;
