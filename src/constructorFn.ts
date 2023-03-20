@@ -32,7 +32,7 @@ Decorator:${JSON.stringify(option)}`;
 const checkAndReturnOptions = (
   decorators: AzDecorator[],
   defaultSymbolType: SignType
-): HaveEverythingOption[] => {
+): [HaveEverythingOption[], { [name: string]: number }] => {
   const checkedName: string[] = [];
   // いろいろ改変するので独立させておく
   const decArr = decorators;
@@ -83,6 +83,10 @@ const checkAndReturnOptions = (
     return newProp;
   });
 
-  options.map();
+  const nameMap: { [name: string]: number } = Object.fromEntries(
+    options.map((v, i) => [v.name, i])
+  );
+
+  return [options, nameMap];
 };
 export default checkAndReturnOptions;

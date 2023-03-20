@@ -15,13 +15,15 @@ export default class CompoundDecorator implements DraftDecoratorType {
 
   private readonly callback: (v: DecoratorRange[][]) => DecoratorRange[][];
 
+  private readonly nameMap: { [name: string]: number };
+
   constructor(
     decorator: Array<AzDecorator>,
     defaultSignType: SignType = "same",
     callback = (v: DecoratorRange[][]) => v
   ) {
     this.decorators = [...decorator];
-    this.option = checkAndReturnOptions(this.decorators, defaultSignType);
+    [this.option, this.nameMap] = checkAndReturnOptions(this.decorators, defaultSignType);
     this.callback = callback;
   }
 
